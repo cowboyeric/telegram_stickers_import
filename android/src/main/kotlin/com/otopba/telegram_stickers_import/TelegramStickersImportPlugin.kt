@@ -16,16 +16,16 @@ import io.flutter.plugin.common.MethodChannel.Result
 import java.io.File
 
 class TelegramStickersImportPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
-    private var activity: FlutterActivity? = null
-    private var binaryMessenger: BinaryMessenger? = null
-    private var channel: MethodChannel? = null
+    private lateinit var activity: FlutterActivity
+    private lateinit var binaryMessenger: BinaryMessenger
+    private lateinit var channel: MethodChannel
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         binaryMessenger = flutterPluginBinding.binaryMessenger
     }
 
     override fun onDetachedFromEngine(binding: FlutterPlugin.FlutterPluginBinding) {
-        binaryMessenger = null
+//        binaryMessenger = null
     }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
