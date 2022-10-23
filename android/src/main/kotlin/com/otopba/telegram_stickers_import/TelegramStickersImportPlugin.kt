@@ -93,7 +93,7 @@ class TelegramStickersImportPlugin : FlutterPlugin, MethodCallHandler, ActivityA
         intent.putExtra(CREATE_STICKER_PACK_EMOJIS_EXTRA, emojis)
         intent.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK
         if (stickerSet.isAnimated) {
-            intent.type = "video/webm"
+            intent.type = "image/*"
         } else {
             intent.type = "application/x-tgsticker"
         }
